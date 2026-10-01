@@ -5,6 +5,23 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@layer base {
+    input[type='text']:not([class]),
+    input[type='email']:not([class]),
+    input[type='password']:not([class]),
+    textarea:not([class]) {
+        @apply block w-full mt-1 border border-gray-300 rounded px-3 py-2;
+    }
+
+    button[type='submit']:not([class]) {
+        @apply w-full bg-blue-600 text-white py-2 rounded cursor-pointer hover:bg-blue-700;
+    }
+
+    form a:not([class]) {
+        @apply text-blue-600 hover:underline;
+    }
+}
+
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
