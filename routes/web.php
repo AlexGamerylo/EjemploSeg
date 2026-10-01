@@ -10,7 +10,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Rutas protegidas por autenticación
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
         ->name('dashboard');
